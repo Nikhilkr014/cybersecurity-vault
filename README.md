@@ -1,32 +1,62 @@
-# React + TypeScript + Vite
+# Xero
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A premium full-stack cybersecurity vault web application featuring client-side AES-256-GCM encryption, secure user authentication, and high-fidelity interactive user interfaces.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Responsive Capsule Header**: A grid-aligned capsule navigation bar featuring spring sliding active item indicators (powered by Framer Motion) and integrated Log In/Sign Up buttons.
+- **Interactive Cursor Spotlight**: A Vercel/Linear style cursor-tracking border spotlight glow on the landing card that follows mouse coordinates in real-time.
+- **Dynamic SVG Animation Pipeline**: A 60fps data flow line animation connecting geometric nodes dynamically inside the hero card layout.
+- **Aurora Authentication**: A custom, modern two-column registration page with staggered entrance transitions and specular frosted glass buttons.
+- **Secure Cryptographic Vault**: A client-side cryptography dashboard enabling users to encrypt, store, and decrypt private notes using passphrase keys.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19, TypeScript, Vite, Tailwind CSS (v4), Framer Motion, Lucide Icons.
+- **Backend**: Node.js, Express, TypeScript, JWT (JSON Web Tokens), bcryptjs, AES-256-GCM.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Getting Started
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) installed.
+
+### Installation
+
+1. Clone this repository to your local machine.
+2. Install client dependencies at the root:
+   ```bash
+   npm install
+   ```
+3. Install server dependencies inside the `server/` directory:
+   ```bash
+   cd server
+   npm install
+   ```
+
+### Running Locally
+
+To run the application locally, start both the client and server development servers:
+
+#### 1. Start the Backend Server (Port 5000)
+```bash
+cd server
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+#### 2. Start the Frontend Client (Vite Dev Server)
+In a separate terminal at the root directory:
+```bash
+npm run dev
+```
+Open `http://localhost:5173` in your browser.
+
+### Building for Production
+
+To compile and bundle the client-side code:
+```bash
+npm run build
+```
+The optimized assets will be outputted in the `dist/` directory.
