@@ -663,7 +663,6 @@ export default function App() {
       {/* HERO CARD */}
       <section className="hero-card" onMouseMove={handleMouseMove}>
         <div className="hero-card-border-glow" />
-        <div className="hero-card-bg-glow" />
         <div className="hero-grid"></div>
 
         {/* ICON PIPELINE */}

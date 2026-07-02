@@ -223,23 +223,7 @@ nav {
   mask-composite: exclude;
 }
 
-.hero-card-bg-glow {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  background: radial-gradient(
-    500px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
-    rgba(200, 160, 224, 0.04),
-    transparent 45%
-  );
-}
-
-.hero-card:hover .hero-card-border-glow,
-.hero-card:hover .hero-card-bg-glow {
+.hero-card:hover .hero-card-border-glow {
   opacity: 1;
 }
 
